@@ -1,0 +1,495 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+.playfair-display-font {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero_background {
+	position: absolute;
+	width: 100%;
+	z-index: -10;
+	top: -120px;
+	opacity: 27%;
+}
+
+.topnav {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 100%;
+  z-index: 20;
+}
+
+.topnav a {
+	transition: all 0.5s;
+	transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	float: right;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 30.5px;
+	text-decoration: none;
+	font-size: 24px;
+	height: 50px;
+	z-index: 22;
+}
+.topnav a:hover {
+	transition: all 1s;
+	transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	background-color: #ddd;
+	color: black;
+	text-shadow: 0px 0px 10px #00000031;
+	box-shadow: 0px 0px 200px 0px #ffffff;
+  
+}
+/* Makes sure already active pages don't glow black when hovered - decreases text contrast. */
+.topnav a.active:hover {
+	text-shadow: 0px 0px 0px white;
+}
+.topnav a.active {
+	background-color: #ff5e00c8;
+	color: white;
+  box-shadow: 0px 0px 200px 0px #FF5E00;
+	z-index: 21;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: rgba(255, 255, 255, 0.15) 0px 0px 10px 30px;
+  color: black;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: rgb(198, 129, 87);
+  color: white;
+  box-shadow: rgb(198, 129, 87, 0.3) 0px 0px 10px 20px;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+.main {
+  padding: 35px;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: solid rgba(0, 0, 0, 0.589) 2px;
+  border-radius: 5px;
+  backdrop-filter: blur(150px);
+}
+
+.footer {
+  padding: 35px;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 25px;
+  border: solid rgba(0, 0, 0, 0.589) 2px;
+  border-radius: 5px;
+  backdrop-filter: blur(150px);
+  text-align: center;
+}
+
+.footer a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 17px;
+  margin-right: 20px;
+}
+
+.footer a:hover {
+  color: rgb(137, 137, 137);
+}
+
+.parallax {
+  min-height: 400px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid rgba(0, 0, 0, 0.589) 2px;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+.parallax_home {
+  background-image: url("images/xandro-vandewalle-j6XLbdXabfw-unsplash.jpg");
+  background-size: 55%;
+  background-position: center bottom -360px;
+  min-height: 500px;
+}
+
+.parallax_skills {
+  background-image: url("images/bw_butterfly.jpg");
+  background-position: center bottom -750px;
+  background-size: 60%;
+}
+
+.parallax_reflection {
+  background-image: url("images/bw_twobirds.jpg");
+  background-position: center;
+}
+
+p,
+ul {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  line-height: 20px;
+  font-size: 13px;
+}
+
+h2,
+h3,
+button {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.first_accordion {
+  margin-top: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.last_accordion {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: "\002B";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion .active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.logo {
+  height: 24px;
+
+}
+
+.activity {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.activity_text {
+  color: black;
+}
+
+.tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.tg td {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.tg th {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.tg .tg-amwm {
+  font-weight: bold;
+  text-align: center;
+  vertical-align: top;
+}
+
+.tg .tg-0lax {
+  text-align: left;
+  vertical-align: top;
+}
+
+iframe {
+  width: 100%;
+  height: 500px;
+}
+
+body {
+  background-color: #F1E8B8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin: 20px 0px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+h1,
+h2,
+h3,
+p {
+  text-align: center;
+}
+
+.pop_up_image {
+  /*The styling for the image container that pops up when clicked*/
+  position: fixed;
+  /*Makes the image stay in the same place even when scrolling*/
+  top: 0;
+  /*Positions the container at the center, using the top left cornor*/
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  /*Makes the rest of the page dark*/
+  height: 100%;
+  /*Makes the container take up the whole height and width*/
+  width: 100%;
+  z-index: 100;
+  /*Puts it in front of the other elemts*/
+  display: none;
+  /*Doesn't show until the image is clicked on*/
+}
+.pop_up_image span {
+  /*Used to creat the close button X*/
+  position: absolute;
+  /*Makes it possible to position using top and right*/
+  top: 0;
+  /*Puts it near the top right corner, 10px from the right*/
+  right: 10px;
+  font-size: 40px;
+  font-weight: bolder;
+  /*Makes it bold for easier visibility*/
+  color: #ffffff;
+  cursor: pointer;
+  /*Makes the cursor a pointer to tell the user it can be clicked on*/
+  z-index: 100;
+  /*Puts it in front of the rest of the page*/
+}
+.pop_up_image img {
+  position: absolute;
+  /*Makes it so the image can be controlled using top and left*/
+  top: 50%;
+  /*Puts it top left corner at the center*/
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*moves it so the middle point is at the center*/
+  max-height: 90%;
+  max-width: 90%;
+  object-fit: cover;
+  /*Makes the aspect ratio stay the same in all device sizes*/
+  transition: 0.6s;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.card img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.28) 0px 0px 30px;
+  scale: 1.05;
+}
+
+.hero_card {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: grid;
+	grid-template-areas: "hero_card_img hero_card_txt";
+	grid-template-columns: 1fr 3fr;
+  gap: 0px;
+	padding: 0px;
+}
+
+.container>div {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+.container>div.hero_card_img {
+	grid-area: hero_card_image;
+}
+.container>div.hero_card_txt {
+	grid-area: hero_card_text;
+}
+
+.hero_card_img {
+	height: 400px;
+	width: 500px;
+}
+/* adds a drop shadow to the image using webkit filters, and the default as backup. */
+.hero_card_img img {
+	height: 100%;
+	border-radius: 0;
+}
+/* General styling for the text on the title card. */
+.hero_card_txt {
+	margin: auto;
+	font-weight: 400;
+	font-style: normal;
+  font-family: "Playfair Display", serif;
+}
+/* more refined text styling for the smaller 'sub-title'. */
+.hero_card_txt h1 {
+	color: #191919;
+	text-shadow: rgba(255, 255, 255, 0.27) 0px 0 8.6px;
+	font-size: 44px;
+  line-height: 
+}
+/* makes the main title larger and clearer than usual */
+.hero_card_txt h2 {
+	color: #191919;
+	font-size: 22px;
+}
+
+.hero_card_txt h3 {
+	color: #191919;
+	font-size: 8px;
+}
+
+.main img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  iframe {
+    width: 100%;
+    height: 300px;
+  }
+  .main {
+    /* eliminate bottom margin */
+  }
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
