@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
+:root {
+  --color-one: #000000;
+  --color-two: #ffffff;
+  --color-three: #ff5e00;
+  --color-four: #ff5e00;
+  --color-five: #ff5e00;
+  --color-six: #ff5e00;
+  --color-seven: #ff5e00;
+}
+
 .playfair-display-font {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -419,8 +429,7 @@ p {
 }
 
 .hero_card_img {
-	height: 400px;
-	width: 500px;
+	max-height: 400px;
 }
 /* adds a drop shadow to the image using webkit filters, and the default as backup. */
 .hero_card_img img {
@@ -452,6 +461,78 @@ p {
 	font-size: 8px;
 }
 
+
+
+
+
+.pages_cards_wrapper {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: grid;
+	grid-template-areas: "pages_cards_large pages_cards_column";
+	grid-template-columns: 3fr 2fr;
+  gap: 0px;
+	padding: 0px;
+}
+.pages_cards_large {
+	height: 300px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+}
+.pages_cards_column {
+	font-weight: 400;
+	font-style: normal;
+  font-family: "Playfair Display", serif;
+  height: 300px;
+}
+.pages_cards_small {
+  height: 140px;
+  width: 100%;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 5px;
+  margin: 20px;
+  text-align: center;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 350%;
+}
+.pages_cards_small:hover {
+  box-shadow: rgba(0, 0, 0, 0.28) 0px 0px 30px;
+  scale: 1.02;
+  background-size: 400%;
+}
+.pages_cards_large:hover {
+  box-shadow: rgba(0, 0, 0, 0.28) 0px 0px 30px;
+  scale: 1.02;
+  background-size: 350%;
+}
+.pages_cards_column h1 {
+	color: #191919;
+	text-shadow: rgba(255, 255, 255, 0.27) 0px 0 8.6px;
+	font-size: 44px;
+  line-height: 
+}
+.pages_cards_column h2 {
+	color: #191919;
+	font-size: 22px;
+  margin-top: 50px;
+}
+.pages_cards_large h2 {
+	color: #191919;
+	font-size: 22px;
+  margin-top: 130px;
+}
 .main img {
   width: 100%;
   height: auto;
