@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
 :root {
   --color-one: #000000;
   --color-two: #ffffff;
-  --color-three: #ff5e00;
-  --color-four: #ff5e00;
-  --color-five: #ff5e00;
-  --color-six: #ff5e00;
-  --color-seven: #ff5e00;
+  --color-three: #0D3B66;
+  --color-four: #9E2B25;
+  --color-five: #FAF0CA;
+  --color-six: #F4D35E;
+  --color-seven: #EE964B;
 }
 
 .playfair-display-font {
@@ -26,8 +27,7 @@
 }
 
 .topnav {
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
+  background-color: white;
   overflow: hidden;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -53,7 +53,7 @@
 .topnav a:hover {
 	transition: all 1s;
 	transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-	background-color: #ddd;
+	background-color: var(--color-three);
 	color: black;
 	text-shadow: 0px 0px 10px #00000031;
 	box-shadow: 0px 0px 200px 0px #ffffff;
@@ -64,9 +64,9 @@
 	text-shadow: 0px 0px 0px white;
 }
 .topnav a.active {
-	background-color: #ff5e00c8;
+	background-color: var(--color-three);
 	color: white;
-  box-shadow: 0px 0px 200px 0px #FF5E00;
+  /* box-shadow: 0px 0px 200px 0px var(--color-three); */
 	z-index: 21;
 }
 
@@ -84,17 +84,15 @@
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: rgba(255, 255, 255, 0.15) 0px 0px 10px 30px;
-  color: black;
+  /* box-shadow: var(--color-three) 0px 0px 10px 30px; */
+  color: rgb(255, 255, 255);
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-  background-color: rgb(198, 129, 87);
   color: white;
-  box-shadow: rgb(198, 129, 87, 0.3) 0px 0px 10px 20px;
+  /* box-shadow: var(--color-three) 0px 0px 10px 20px; */
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -109,12 +107,13 @@
   margin: auto;
   margin-top: 50px;
   margin-bottom: 50px;
-  border: solid rgba(0, 0, 0, 0.589) 2px;
+  border: solid var(--color-three) 2px;
   border-radius: 5px;
   backdrop-filter: blur(150px);
 }
 
 .footer {
+  font-family: "Playfair Display SC", serif;
   padding: 35px;
   max-width: 800px;
   margin: auto;
@@ -133,7 +132,12 @@
 }
 
 .footer a:hover {
-  color: rgb(137, 137, 137);
+  color: rgb(160, 94, 94);
+}
+
+.footer h3 {
+  font-size: 13px;
+  font-family: "Playfair Display SC", serif;
 }
 
 .parallax {
@@ -190,7 +194,7 @@ button {
 }
 
 .accordion {
-  background-color: #eee;
+  background-color: #1e87e967;
   color: #444;
   cursor: pointer;
   padding: 18px;
@@ -298,7 +302,7 @@ iframe {
 }
 
 body {
-  background-color: #F1E8B8;
+  background-color: white;
 }
 
 * {
@@ -448,7 +452,6 @@ p {
 	color: #191919;
 	text-shadow: rgba(255, 255, 255, 0.27) 0px 0 8.6px;
 	font-size: 44px;
-  line-height: 
 }
 /* makes the main title larger and clearer than usual */
 .hero_card_txt h2 {
@@ -486,6 +489,7 @@ p {
   background-repeat: no-repeat;
   background-size: 300%;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+  background-color: var(--color-three);
 }
 .pages_cards_column {
 	font-weight: 400;
@@ -506,6 +510,7 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 350%;
+  background-color: var(--color-three);
 }
 .pages_cards_small:hover {
   box-shadow: rgba(0, 0, 0, 0.28) 0px 0px 30px;
@@ -518,20 +523,25 @@ p {
   background-size: 350%;
 }
 .pages_cards_column h1 {
-	color: #191919;
+	color: white;
 	text-shadow: rgba(255, 255, 255, 0.27) 0px 0 8.6px;
 	font-size: 44px;
-  line-height: 
+  font-family: "Playfair Display SC", serif;
 }
 .pages_cards_column h2 {
-	color: #191919;
+	color: white;
 	font-size: 22px;
   margin-top: 50px;
+  font-family: "Playfair Display SC", serif;
 }
 .pages_cards_large h2 {
-	color: #191919;
+	color: white;
 	font-size: 22px;
   margin-top: 130px;
+  font-family: "Playfair Display SC", serif;
+}
+a {
+  text-decoration: none;
 }
 .main img {
   width: 100%;
