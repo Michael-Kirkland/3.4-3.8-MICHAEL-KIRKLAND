@@ -23,19 +23,21 @@
 	width: 100%;
 	z-index: -10;
 	top: -120px;
-	opacity: 27%;
+	opacity: 34%;
 }
 
 .topnav {
   background-color: white;
   overflow: hidden;
-  font-family: "Playfair Display", serif;
+  font-family: "Playfair Display SC", serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   width: 100%;
   z-index: 20;
+  position: fixed;
+  transform: translateY(-260px);
 }
 
 .topnav a {
@@ -99,6 +101,14 @@
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
+}
+
+p .logo_text {
+  text-align: right;
+  font-family: "Playfair Display SC", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .main {
@@ -244,7 +254,6 @@ button {
 
 .logo {
   height: 24px;
-
 }
 
 .activity {
@@ -548,6 +557,29 @@ a {
   height: auto;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.home_hero {
+  margin: 260px 0px 180px 0px;
+  text-align: center;
+  font-family: "Playfair Display SC", serif;
+}
+
+.home_hero h1 {
+  font-size: 84px;
+  color: #191919;
+  line-height: 0px;
+}
+
+.home_hero h2 {
+  font-size: 22px;
+  color: #191919;
+  line-height: 80px;
+}
+
+.home_hero h3 {
+  font-size: 18px;
+  color: #343434c3;
 }
 
 @media screen and (max-width: 600px) {
