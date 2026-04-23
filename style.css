@@ -29,11 +29,13 @@ hr {
 
 .hero_background {
 	position: absolute;
-	width: 100%;
+  width: 100%;
+  justify-content: center;
 	z-index: -10;
 	top: -120px;
 	opacity: 34%;
   background-image: linear-gradient(rgb(255, 0, 0), rgba(255, 255, 255, 0));
+  
 }
 
 .topnav {
@@ -589,6 +591,10 @@ a {
 .home_hero h3 {
   font-size: 18px;
   color: #343434c3;
+}
+
+.fiftypx_spacing {
+  height: 50px;
 }
 
 @media screen and (max-width: 600px) {
