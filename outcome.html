@@ -19,9 +19,9 @@
       <div class="topnav" id="myTopnav">
         <a href="index.html"
           >Iran War</a>
-        <a href="history.html">Iran History</a>
-        <a href="strategy.html">Strategy</a>
-        <a href="outcome.html" class="active">Outcome Theories</a>
+        <a href="outcome.html" style="float: right;" class="active"><span class="nav_num">03</span> Outcome Theories</a>
+        <a href="strategy.html" style="float: right;"><span class="nav_num">02</span> Strategy</a>
+        <a href="history.html" style="float: right;"><span class="nav_num">01</span> Iran History</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
@@ -55,7 +55,8 @@
         Iran may suffer heavier direct damage, yet still “win” if it prevents regime collapse, keeps retaliatory capability alive, 
         and makes the war politically or economically unsustainable for its enemies. This is one of the clearest asymmetric-war outcomes.
       </p>
-
+      
+      <br>
       <h2><strong>Theory 2:</strong> The longer war favors Iran</h2>
       <p>
         The longer the conflict continues, the more opportunities Iran has to exploit indirect pressure: shipping disruption, energy volatility, 
@@ -66,11 +67,60 @@
         A regime fighting for existence will accept risks that would normally seem irrational.
       </p>
 
+      <br>
       <h2><strong>Theory 3:</strong> The war changes the region more than it changes Iran</h2>
       <p>
         Another possibility is that the war’s biggest effects fall outside Iran itself: energy markets, U.S. alliances, Israeli strategy, Gulf state 
         calculations, and the future of regional deterrence. In this theory, the war is a system shock.
       </p>
+
+      <br>
+
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <h3>Worship with the Ayatollah</h3>
+            <img src="images/aya_worship.webp" class="card_image">
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <h3>Card 1</h3>
+            <img src="images/Iran_protests_8_January_2026.jpg" class="card_image">
+            <p>Some text</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <h3>Card 1</h3>
+            <img src="images/bw_giraffe.jpg" class="card_image">
+            <p>Some text</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <h3>Card 1</h3>
+            <img src="images/bw_giraffe.jpg" class="card_image">
+            <p>Some text</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <h3>Card 1</h3>
+            <img src="images/bw_giraffe.jpg" class="card_image">
+            <p>Some text</p>
+          </div>
+        </div>
+      </div>
+
 
       <hr>
 
@@ -90,5 +140,20 @@
         <h3>Website built and maintained by Michael Kirkland</h3>
       </div>
     </div>
+    
+    <div class="pop_up_image"><span>&times;</span> <img alt="Beach" src="images/pexels-asadphoto-457882 - Copy.jpg"></div>
+    <script>
+        document.querySelectorAll('.card img').forEach(image =>{
+          image.onclick = () =>{
+              document.querySelector('.pop_up_image').style.display = 'block';
+              document.querySelector('.pop_up_image img').src = image.getAttribute('src');
+          }
+        })
+          
+        document.querySelector('.pop_up_image span').onclick = () =>{
+          document.querySelector('.pop_up_image').style.display = 'none';
+        }
+      </script>
+
   </body>
 </html>

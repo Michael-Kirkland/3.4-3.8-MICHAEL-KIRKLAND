@@ -19,9 +19,9 @@
       <div class="topnav" id="myTopnav">
         <a href="index.html" class="active"
           >Iran War</a>
-        <a href="history.html">Iran History</a>
-        <a href="strategy.html">Strategy</a>
-        <a href="outcome.html">Outcome Theories</a>
+        <a href="outcome.html" style="float: right;"><span class="nav_num">03</span> Outcome Theories</a>
+        <a href="strategy.html" style="float: right;"><span class="nav_num">02</span> Strategy</a>
+        <a href="history.html" style="float: right;"><span class="nav_num">01</span> Iran History</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
@@ -51,6 +51,8 @@
       <h2>This is not just a war of bombs and borders. It is a strategic contest over who can absorb pain, 
         impose costs, and control escalation. </h2>
       <img src="images/aya_death_sorrow.avif" class="card_image">
+      <h2 class="img_desc">Iranian's grieving the death of the Ayatollah</h2>
+
       <h2>Iran, the United States, and Israel are all playing different games 
         — and each side believes time favors them in different ways.</h2>
       <p>
@@ -115,13 +117,6 @@
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
-
-      
-        <div class="card">
-          <h3>Card 1</h3>
-          <img src="images/aya_death_sorrow.avif" class="card_image">
-          <p>Some text</p>
-        </div>
       
 
     </div>
@@ -133,18 +128,5 @@
         <h3>Website built and maintained by Michael Kirkland</h3>
       </div>
     </div>
-    <div class="pop_up_image"><span>&times;</span> <img alt="Beach" src="images/pexels-asadphoto-457882 - Copy.jpg"></div>
-    <script>
-        document.querySelectorAll('.card img').forEach(image =>{
-          image.onclick = () =>{
-              document.querySelector('.pop_up_image').style.display = 'block';
-              document.querySelector('.pop_up_image img').src = image.getAttribute('src');
-          }
-        })
-          
-        document.querySelector('.pop_up_image span').onclick = () =>{
-          document.querySelector('.pop_up_image').style.display = 'none';
-        }
-      </script>
   </body>
 </html>

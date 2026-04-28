@@ -52,17 +52,6 @@ hr {
   transform: translateY(-260px);
 }
 
-.topnav a {
-	transition: all 0.5s;
-	transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-	color: #f2f2f2;
-	text-align: center;
-	padding: 30.5px;
-	text-decoration: none;
-	font-size: 24px;
-	height: 50px;
-	z-index: 22;
-}
 .topnav a:hover {
 	transition: all 1s;
 	transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -72,16 +61,6 @@ hr {
 	box-shadow: 0px 0px 200px 0px #ffffff;
   
 }
-/* Makes sure already active pages don't glow black when hovered - decreases text contrast. */
-.topnav a.active:hover {
-	text-shadow: 0px 0px 0px white;
-}
-.topnav a.active {
-	background-color: var(--color-three);
-	color: white;
-  /* box-shadow: 0px 0px 200px 0px var(--color-three); */
-	z-index: 21;
-}
 
 /* Style the links inside the navigation bar */
 .topnav a {
@@ -89,10 +68,13 @@ hr {
   display: block;
   color: #000000;
   text-align: center;
-  padding: 14px 20px;
+  padding: 7px 0 7px 0;
+  margin: 15px 20px;
   text-decoration: none;
   font-size: 17px;
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
 }
 
 /* Change the color of links on hover */
@@ -100,18 +82,37 @@ hr {
   /* box-shadow: var(--color-three) 0px 0px 10px 30px; */
   color: rgb(255, 255, 255);
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-bottom-color: #d9d2c0;  /* light tan rule */
+  color: var(--color-three);
+  background: transparent;       /* kill the navy fill on hover */
+  box-shadow: none;
+  text-shadow: none;
 }
 
-/* Add an active class to highlight the current page */
 .topnav a.active {
   color: white;
   /* box-shadow: var(--color-three) 0px 0px 10px 20px; */
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  z-index: 21;
+}
+
+.topnav a.active,
+.topnav a.active:hover {
+  border-bottom-color: var(--color-four);  /* #9E2B25 red */
+  color: var(--color-one);
+  background: transparent;       /* kill the navy fill */
+  box-shadow: none;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
+}
+
+.nav_num {
+  font-size: 13px;
+  font-family: "Playfair Display SC", serif;
+  color: rgba(158, 158, 158, 0.611);
 }
 
 p .logo_text {
@@ -124,11 +125,11 @@ p .logo_text {
 
 .main {
   padding: 35px;
-  max-width: 800px;
+  max-width: 1000px;
   margin: auto;
   margin-top: 50px;
   margin-bottom: 50px;
-  border: solid var(--color-three) 2px;
+  /* border: solid var(--color-three) 2px; */
   border-radius: 5px;
   backdrop-filter: blur(150px);
 }
@@ -201,8 +202,8 @@ ul {
   font-weight: 300;
   font-style: normal;
   font-variation-settings: "wdth" 100;
-  line-height: 20px;
-  font-size: 13px;
+  line-height: 30px;
+  font-size: 19px;
 }
 
 h2,
@@ -365,69 +366,6 @@ h2,
 h3,
 p {
   text-align: center;
-}
-
-.pop_up_image {
-  /*The styling for the image container that pops up when clicked*/
-  position: fixed;
-  /*Makes the image stay in the same place even when scrolling*/
-  top: 0;
-  /*Positions the container at the center, using the top left cornor*/
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  /*Makes the rest of the page dark*/
-  height: 100%;
-  /*Makes the container take up the whole height and width*/
-  width: 100%;
-  z-index: 100;
-  /*Puts it in front of the other elemts*/
-  display: none;
-  /*Doesn't show until the image is clicked on*/
-}
-.pop_up_image span {
-  /*Used to creat the close button X*/
-  position: absolute;
-  /*Makes it possible to position using top and right*/
-  top: 0;
-  /*Puts it near the top right corner, 10px from the right*/
-  right: 10px;
-  font-size: 40px;
-  font-weight: bolder;
-  /*Makes it bold for easier visibility*/
-  color: #ffffff;
-  cursor: pointer;
-  /*Makes the cursor a pointer to tell the user it can be clicked on*/
-  z-index: 100;
-  /*Puts it in front of the rest of the page*/
-}
-.pop_up_image img {
-  position: absolute;
-  /*Makes it so the image can be controlled using top and left*/
-  top: 50%;
-  /*Puts it top left corner at the center*/
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /*moves it so the middle point is at the center*/
-  max-height: 90%;
-  max-width: 90%;
-  object-fit: cover;
-  /*Makes the aspect ratio stay the same in all device sizes*/
-  transition: 0.6s;
-}
-
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: 0.3s;
-}
-
-.card img:hover {
-  opacity: 0.8;
-  cursor: pointer;
-  margin: auto;
-  box-shadow: rgba(0, 0, 0, 0.28) 0px 0px 30px;
-  scale: 1.05;
 }
 
 .hero_card {
@@ -731,6 +669,7 @@ a {
   height: 200px;
   object-fit: cover;
   transition: 0.3s;
+  margin: 0;
 }
 
 .card img:hover {
@@ -739,6 +678,19 @@ a {
   margin: auto;
   box-shadow: rgba(0, 0, 0, 0.28) 0px 0px 30px;
   scale: 1.05;
+}
+
+.img_desc {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  line-height: 20px;
+  font-size: 15px;
+  color:rgba(104, 104, 104, 0.612);
+  margin: -10px 0 45px 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -763,9 +715,6 @@ a {
     display: block;
     margin-bottom: 20px;
   }
-}
-
-@media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
     display: none;
   }
@@ -773,9 +722,6 @@ a {
     float: right;
     display: block;
   }
-}
-
-@media screen and (max-width: 600px) {
   .topnav.responsive {
     position: relative;
   }
