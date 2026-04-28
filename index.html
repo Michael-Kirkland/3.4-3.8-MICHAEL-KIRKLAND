@@ -27,6 +27,17 @@
         </a>
       </div>
     </nav>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
     
     <img class="hero_background" src="images/usa_artillery.jpg">
 
@@ -39,7 +50,7 @@
     <div class="main">
       <h2>This is not just a war of bombs and borders. It is a strategic contest over who can absorb pain, 
         impose costs, and control escalation. </h2>
-      <img src="images/aya_death_sorrow.avif">
+      <img src="images/aya_death_sorrow.avif" class="card_image">
       <h2>Iran, the United States, and Israel are all playing different games 
         — and each side believes time favors them in different ways.</h2>
       <p>
@@ -105,6 +116,14 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
 
+      
+        <div class="card">
+          <h3>Card 1</h3>
+          <img src="images/aya_death_sorrow.avif" class="card_image">
+          <p>Some text</p>
+        </div>
+      
+
     </div>
     <div class="footer">
       <div class="footer_links">
@@ -114,5 +133,18 @@
         <h3>Website built and maintained by Michael Kirkland</h3>
       </div>
     </div>
+    <div class="pop_up_image"><span>&times;</span> <img alt="Beach" src="images/pexels-asadphoto-457882 - Copy.jpg"></div>
+    <script>
+        document.querySelectorAll('.card img').forEach(image =>{
+          image.onclick = () =>{
+              document.querySelector('.pop_up_image').style.display = 'block';
+              document.querySelector('.pop_up_image img').src = image.getAttribute('src');
+          }
+        })
+          
+        document.querySelector('.pop_up_image span').onclick = () =>{
+          document.querySelector('.pop_up_image').style.display = 'none';
+        }
+      </script>
   </body>
 </html>
